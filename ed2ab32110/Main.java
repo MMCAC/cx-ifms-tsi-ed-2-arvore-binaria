@@ -22,7 +22,38 @@ public class Main {
         ab.inserir(5);
         ab.inserir(17);
         ab.inserir(20);
-        System.out.println("");
-        ab.mostrarRecursivo(ab.getRaiz());
+        System.out.println("---------------------------");
+        System.out.println("Mostrar em Ordem: ");
+        ab.mostrarEmOrdem();
+
+
+        System.out.println("---------------------------");
+        System.out.println("Mostrar em Ordem Recursivo: ");
+        ab.mostrarEmOrdemRecursivo(ab.getRaiz());
+        ab.resetarVisitados(ab.getRaiz());
+
+
+        System.out.println("---------------------------");
+        System.out.println("Mostrar em Pré Ordem: ");
+        ab.mostrarPreOrdem();
+        ab.resetarVisitados(ab.getRaiz());
+
+
+        System.out.println("---------------------------");
+        System.out.println("Mostrar em Pré Ordem Recursivo: ");
+        ab.mostrarPreOrdemRecursivo(ab.getRaiz());
+
+
+
+        System.out.println("---------------------------");
+        System.out.println("Mostrar em Pós Ordem: ");
+        ab.mostrarPosOrdem();
+        ab.resetarVisitados(ab.getRaiz());
+        System.out.println("---------------------------");
+
+
+        System.out.println("Mostrar em Pós Ordem Recursivo: ");
+        ab.mostrarPosOrdemRecursivo(ab.getRaiz());
+        System.out.println("---------------------------");
     }
 }
