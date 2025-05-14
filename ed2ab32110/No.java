@@ -13,6 +13,7 @@ public class No {
     private No esq; // filho da esquerda
     private No dir; // filho da direita
     private No pai; 
+    private boolean visitado;
 
     public No() {
     }
@@ -51,6 +52,14 @@ public class No {
 
     public void setPai(No pai) {
         this.pai = pai;
+    }
+    
+    public boolean isVisitado() {
+        return visitado;
+    }
+
+    public void setVisitado(boolean visitado) {
+        this.visitado = visitado;
     }
     
     
