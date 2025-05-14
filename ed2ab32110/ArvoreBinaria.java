@@ -6,7 +6,7 @@ package com.mycompany.ed2ab32110;
 
 /**
  *
- * @author renato
+ * @author maicon cezar
  */
 public class ArvoreBinaria {
     private No raiz;
