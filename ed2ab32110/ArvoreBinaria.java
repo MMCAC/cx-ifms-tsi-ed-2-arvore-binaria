@@ -50,6 +50,30 @@ public class ArvoreBinaria {
     }
     
     public void mostrar() { // percurso in-order - em ordem
+        if(raiz == null) {
+            System.out.println("Árvore Vazia");
+        }
+        else {
+            No aux = raiz;
+            while(aux != null) {
+                if(aux.getEsq() != null && !aux.getEsq().isVisitado()) {
+                    aux = aux.getEsq();
+                }
+                else if(!aux.isVisitado()) {
+                    System.out.println(aux.getValor());
+                    aux.setVisitado(true);
+                }
+                else if(aux.getDir() != null && !aux.getDir().isVisitado()) {
+                    aux = aux.getDir();
+                }
+                else {
+                    aux = aux.getPai();
+                }
+            }
+        }
+    }
+    
+    public void mostrarRecursivo(No no) {
         if(no != null) {
             mostrarRecursivo(no.getEsq());
             System.out.println(no.getValor());
