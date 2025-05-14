@@ -50,6 +50,10 @@ public class ArvoreBinaria {
     }
     
     public void mostrar() { // percurso in-order - em ordem
-        
+        if(no != null) {
+            mostrarRecursivo(no.getEsq());
+            System.out.println(no.getValor());
+            mostrarRecursivo(no.getDir());
+        }
     }
 }
