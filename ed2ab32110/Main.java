@@ -23,5 +23,6 @@ public class Main {
         ab.inserir(17);
         ab.inserir(20);
         System.out.println("");
+        ab.mostrarRecursivo(ab.getRaiz());
     }
 }
