@@ -146,7 +146,7 @@ public class ArvoreBinaria {
         }
     }
 
-    public void menorValor(No no){
+    public void getMenorValor(No no){
         if(no != null){
             No aux = no;
 
@@ -158,7 +158,7 @@ public class ArvoreBinaria {
         }
     }
 
-    public void maiorValor(No no){
+    public void getMaiorValor(No no){
         if(no != null){
             No aux = no;
 
@@ -166,6 +166,28 @@ public class ArvoreBinaria {
                 aux = aux.getDir();
             }
 
+            System.out.println(aux.getValor());
+        }
+    }
+
+    public void getPredecessor(No no){
+        if(no != null){
+            No aux = no.getEsq();
+            
+            while(aux.getDir() != null){
+                aux = aux.getDir();
+            }
+            System.out.println(aux.getValor());
+        }
+    }
+
+    public void getSucessor(No no){
+        if(no != null){
+            No aux = no.getDir();
+            
+            while(aux.getEsq() != null){
+                aux = aux.getEsq();
+            }
             System.out.println(aux.getValor());
         }
     }
