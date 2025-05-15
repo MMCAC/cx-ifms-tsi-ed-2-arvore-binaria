@@ -52,16 +52,24 @@ public class Main {
         System.out.println("\n---------------------------");
 
 
-        System.out.println("Mostrar em Pós Ordem Recursivo: ");
+        System.out.println("Mostrar em Pós Ordem Recursiva: ");
         ab.mostrarPosOrdemRecursivo(ab.getRaiz());
         System.out.println("\n---------------------------");
 
         System.out.println("Maior valor: ");
-        ab.menorValor(ab.getRaiz());
+        ab.getMaiorValor(ab.getRaiz());
         System.out.println("---------------------------");
 
         System.out.println("Menor valor: ");
-        ab.maiorValor(ab.getRaiz());
+        ab.getMenorValor(ab.getRaiz());
+        System.out.println("---------------------------");
+
+        System.out.println("Predecessor: ");
+        ab.getPredecessor(ab.getRaiz());
+        System.out.println("---------------------------");
+
+        System.out.println("Sucessor: ");
+        ab.getSucessor(ab.getRaiz());
         System.out.println("---------------------------");
     }
 }
