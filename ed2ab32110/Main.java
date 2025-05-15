@@ -27,33 +27,41 @@ public class Main {
         ab.mostrarEmOrdem();
 
 
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Mostrar em Ordem Recursivo: ");
         ab.mostrarEmOrdemRecursivo(ab.getRaiz());
         ab.resetarVisitados(ab.getRaiz());
 
 
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Mostrar em Pré Ordem: ");
         ab.mostrarPreOrdem();
         ab.resetarVisitados(ab.getRaiz());
 
 
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Mostrar em Pré Ordem Recursivo: ");
         ab.mostrarPreOrdemRecursivo(ab.getRaiz());
 
 
 
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
         System.out.println("Mostrar em Pós Ordem: ");
         ab.mostrarPosOrdem();
         ab.resetarVisitados(ab.getRaiz());
-        System.out.println("---------------------------");
+        System.out.println("\n---------------------------");
 
 
         System.out.println("Mostrar em Pós Ordem Recursivo: ");
         ab.mostrarPosOrdemRecursivo(ab.getRaiz());
+        System.out.println("\n---------------------------");
+
+        System.out.println("Maior valor: ");
+        ab.menorValor(ab.getRaiz());
+        System.out.println("---------------------------");
+
+        System.out.println("Menor valor: ");
+        ab.maiorValor(ab.getRaiz());
         System.out.println("---------------------------");
     }
 }
