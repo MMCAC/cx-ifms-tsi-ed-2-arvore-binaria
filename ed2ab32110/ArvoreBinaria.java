@@ -68,7 +68,7 @@ public class ArvoreBinaria {
                     aux = aux.getEsq();
                 }
                 else if(!aux.isVisitado()) {
-                    System.out.println(aux.getValor());
+                    System.out.print(aux.getValor() + " ");
                     aux.setVisitado(true);
                 }
                 else if(aux.getDir() != null && !aux.getDir().isVisitado()) {
@@ -84,7 +84,7 @@ public class ArvoreBinaria {
     public void mostrarEmOrdemRecursivo(No no) {
         if(no != null) {
             mostrarEmOrdemRecursivo(no.getEsq());
-            System.out.println(no.getValor());
+            System.out.print(no.getValor() + " ");
             mostrarEmOrdemRecursivo(no.getDir());
         }
     }
@@ -97,7 +97,7 @@ public class ArvoreBinaria {
             No aux = raiz;
             while (aux != null){
                 if(!aux.isVisitado()){
-                    System.out.println(aux.getValor());
+                    System.out.print(aux.getValor() + " ");
                     aux.setVisitado(true);
                 } else if(aux.getEsq() != null && !aux.getEsq().isVisitado()){
                     aux = aux.getEsq();
@@ -112,7 +112,7 @@ public class ArvoreBinaria {
 
     public void mostrarPreOrdemRecursivo(No no){
         if(no != null){
-            System.out.println(no.getValor());
+            System.out.print(no.getValor() + " ");
             mostrarPreOrdemRecursivo(no.getEsq());
             mostrarPreOrdemRecursivo(no.getDir());
         }
@@ -129,7 +129,7 @@ public class ArvoreBinaria {
                 } else if(aux.getDir() != null && !aux.getDir().isVisitado()){
                     aux = aux.getDir();
                 } else if(aux.isVisitado() == false){
-                    System.out.println(aux.getValor());
+                    System.out.print(aux.getValor() + " ");
                     aux.setVisitado(true);
                 } else {
                     aux = aux.getPai();
@@ -142,7 +142,31 @@ public class ArvoreBinaria {
         if(no != null){
             mostrarPosOrdemRecursivo(no.getEsq());
             mostrarPosOrdemRecursivo(no.getDir());
-            System.out.println(no.getValor());
+            System.out.print(no.getValor() + " ");
+        }
+    }
+
+    public void menorValor(No no){
+        if(no != null){
+            No aux = no;
+
+            while(aux.getEsq() != null){
+                aux = aux.getEsq();
+            }
+
+            System.out.println(aux.getValor());
+        }
+    }
+
+    public void maiorValor(No no){
+        if(no != null){
+            No aux = no;
+
+            while(aux.getDir() != null){
+                aux = aux.getDir();
+            }
+
+            System.out.println(aux.getValor());
         }
     }
 }
